@@ -1,63 +1,85 @@
-import React from 'react'
-import './Contact.css'
-import {MdOutlineMarkEmailRead} from 'react-icons/md'
-import {RiInstagramFill} from 'react-icons/ri'
-import {RiWhatsappFill} from 'react-icons/ri'
-import { useRef } from 'react';
-import emailjs from 'emailjs-com'
+import React, { useState } from 'react';
+import './Contact.css';
+import { MdOutlineMarkEmailRead } from 'react-icons/md';
+import { RiInstagramFill } from 'react-icons/ri';
+import { RiWhatsappFill } from 'react-icons/ri';
+import emailjs from 'emailjs-com';
+import { IoIosCloudDone } from "react-icons/io";
+
 
 const Contact = () => {
-  const from = useRef();
+  const [messageSent, setMessageSent] = useState(false);
+  const formRef = React.useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_71d9m2s', 'template_zvw3bev', from.current, 'D10CfPoIRRTcpDcd3')
-      .then((result) => {
+    emailjs
+      .sendForm('service_6gak02a', 'template_yylp1q4', formRef.current, '7BHCZELwsRG5EKXCn')
+      .then(
+        (result) => {
           console.log(result.text);
-      }, (error) => {
+          setMessageSent(true);
+
+          setTimeout(() => {
+            setMessageSent(false);
+          }, 5000);
+        },
+        (error) => {
           console.log(error.text);
-      });
-    e.target.reset()
+        }
+      );
   };
 
+
   return (
-   <section id='contact'>
-    <h5>Get In Touch</h5>
-    <h2>Contact</h2>
+    <section id="contact">
+      <h5>Get In Touch</h5>
+      <h2>Contact</h2>
 
-    <div className="container contact__container">
-      <div className="contact_options">
-        <article className='contact__option'>
-          <MdOutlineMarkEmailRead />
-          <h4>Email ID</h4>
-          <h5> rishupandey80@gmail.com </h5>
-          <a href="mailto: rishupandey80@gmail.com" target='_blannk'> Send a message</a>
-        </article>
+      <div className="container contact__container">
+        <div className="contact_options">
+          <article className='contact__option'>
+            <MdOutlineMarkEmailRead />
+            <h4>Email ID</h4>
+            <h5> rishupandey80@gmail.com </h5>
+            <a href="mailto: rishupandey80@gmail.com" target='_blannk'> Send a message</a>
+          </article>
 
-        <article className='contact__option'>
-          <RiInstagramFill />
-          <h4>Instagram</h4>
-          <h5> Ritesh Pandey </h5>
-          <a href="https://www.instagram.com/_iampandey_/" target='_blannk'> Send a message</a>
-        </article>
+          <article className='contact__option'>
+            <RiInstagramFill />
+            <h4>Instagram</h4>
+            <h5> Ritesh Pandey </h5>
+            <a href="https://www.instagram.com/_iampandey_/" target='_blannk'> Send a message</a>
+          </article>
 
-        <article className='contact__option'>
-          <RiWhatsappFill />
-          <h4>Whatsapp</h4>
-          <h5> +917054219942</h5>
-          <a href="https://api.whatsapp.com/send?phone=+917054219942" target='_blannk'> Send a message</a>
-        </article>
+          <article className='contact__option'>
+            <RiWhatsappFill />
+            <h4>Whatsapp</h4>
+            <h5> +917054219942</h5>
+            <a href="https://api.whatsapp.com/send?phone=+917054219942" target='_blannk'> Send a message</a>
+          </article>
+        </div>
+
+        <form ref={formRef} onSubmit={sendEmail}>
+          <input type="text" name="name" placeholder="Your Full Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" rows="7" placeholder="Your Message" required></textarea>
+          <button type="submit" className="btn btn-primary">
+            Send Message
+          </button>
+        </form>
+
+        {messageSent && (
+          <div className="popup">
+            <p><IoIosCloudDone />
+              Thank you for your message!...
+            </p>
+          </div>
+        )}
       </div>
-      <form ref={from} onSubmit={sendEmail}>
-        <input type="text" name='name' placeholder='Your Full Name' required/>
-        <input type="email" name='email' placeholder='Your Email' required />
-        <textarea name="message" rows="7" placeholder='Your Message' required> </textarea>
-        <button type='sybmit' className='btn btn-primary'> Send Message</button>
-      </form>
-    </div>
-   </section>
-  )
-}
+    </section>
+  );
+};
 
-export default Contact
+export default Contact;
