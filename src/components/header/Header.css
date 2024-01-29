@@ -1,10 +1,12 @@
 header{
     height: 100vh;
-    padding-top: 7rem;
+    padding-top: 5rem;
     overflow: hidden;
 }
 .header__container{
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    /* text-align: center; */
     height: 100%;
     position: relative;
 }
@@ -32,16 +34,24 @@ header{
     background: var(--color-primary);
 }
 /* me */
+.container2 {
+    margin-left: 15rem;
+    margin-top: 7rem;
+}
 .me{
     background: linear-gradient(var(--color-primary), transparent);
     width: 22rem;
     height: 30rem;
     position: absolute;
-    left: calc(50% - 11rem);
+    left: calc(70% - 11rem);
     margin-top: 4rem;
     border-radius: 12rem 12rem 0 0;
     overflow: hidden;
     padding: 5rem 1.5rem 1.5rem 1.5rem;
+}
+.my_pic{
+    margin-top: -50px;
+    height: 530px;
 }
 /* scroll down */
 .scroll__down{
@@ -60,7 +70,7 @@ header{
     }
 }
 
-@media screen and (max-width: 600px){
+/* @media screen and (max-width: 600px){
     header{
         height: 100vh;
         
@@ -69,4 +79,44 @@ header{
         display: none;
     }
 
-}
+} */
+
+/* media query */
+@media screen and (max-width: 600px) {
+    header {
+      height: 100vh;
+    }
+  
+    .header__social,
+    .scroll__down {
+      display: none;
+    }
+  
+    .header__container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .container2 {
+      order: 2; /* Set the order to 2 for container2 */
+      margin-top: -4.5rem; /* Add margin-top for spacing */
+      margin-right: 15rem;
+    }
+    .typer{
+        padding: 0 !important;
+    }
+    .cta{
+        margin-top: 10px;
+    }
+  
+    .me {
+        order: 1;
+        margin-left: -4rem;
+        margin-top: 20rem;
+        position: absolute;
+    }
+    .my_pic{
+        margin-top: -7rem;
+    }
+  }
+  

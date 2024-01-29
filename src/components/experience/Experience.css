@@ -33,6 +33,15 @@
     margin-top: 6px;
     color: var(--color-primary);
 }
+.view_btn {
+    margin-top: 4rem;
+}
+.about_experience {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 17px;
+}
 @media screen and (max-width: 1024px) {
    .experince__container{
     grid-template-columns: 1fr;

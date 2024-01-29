@@ -32,10 +32,11 @@ html{
 }
 body{
     font-family: 'Poppins', sans-serif;
-    background: var(--color-bg);
+    /* background: var(--color-bg); */
+    background: rgb(30, 30, 30);
     color: var(--color-white);
     line-height: 1.7;
-    background-image: url(../src/assets/bgrec.jpg);
+    background-image: url(../src/assets/bgrec2.jpg);
 }
 .container{
     width: var(--container-width-lg);

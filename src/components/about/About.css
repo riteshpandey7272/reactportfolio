@@ -56,6 +56,15 @@
     color: var(--color-light);
 
 }
+b{
+    color: aqua;
+}
+.read-more-btn{
+    color: #01eafb;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
 /* media query */
 @media screen and (max-width: 1024px){
     .about__container{

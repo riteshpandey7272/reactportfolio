@@ -1,16 +1,19 @@
 footer{
-    background: var(--color-primary);
+    /* background: var(--color-primary); */
+    background: rgb(30, 30, 30);
+    color: white;
     padding: 3rem 0;
     text-align: center;
     font-size: 0.9rem;
     margin-top: 7rem;
 }
 footer a{
-    color: var(--color-bg);
+    /* color: var(--color-bg); */
+    color: white;
 }
 .footer__logo{
-    font-size: 2rem;
-    font-weight: 500;
+    width: 55px;
+    height: 60px;
     margin-bottom: 2rem;
     display: inline-block;
 
@@ -21,6 +24,7 @@ footer a{
     justify-content: center;
     gap: 2rem;
     margin: 0 auto 3rem;
+    color: white;
 
 }
 .footer__socials{
@@ -40,12 +44,12 @@ footer a{
 }
 .footer__socials a:hover{
     background: transparent;
-    color: var(--color-bg);
+    color: aqua;
     border-color: var(--color-bg);
 }
 .footer__copyright{
     margin-bottom: 4rem;
-    color: var(--color-bg);
+    color: white
 }
 @media screen and (max-width: 600px) {
    .permalinks{

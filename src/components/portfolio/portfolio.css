@@ -19,6 +19,9 @@
     border-radius: 1.5rem;
     overflow: hidden;
 }
+.portfolio__item-image img{
+    height: 360px;
+}
 .portfolio__items h3{
     margin: 1.2rem 0 2rem;
 
@@ -28,6 +31,11 @@
     gap: 1rem;
     margin-bottom: 1rem;
 
+}
+.view_btn {
+    display: flex;
+    justify-content: center;
+    align-items: end;
 }
 
 
