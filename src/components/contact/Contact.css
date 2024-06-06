@@ -58,7 +58,10 @@ input, textarea{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     z-index: 999;
   }
-  
+  .blur-background {
+    filter: blur(5px); /* Change the blur intensity as needed */
+  }
+   
 
 @media screen and (max-width: 1024px) {
    .container.contact__container{

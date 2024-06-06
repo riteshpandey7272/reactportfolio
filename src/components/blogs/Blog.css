@@ -1,0 +1,165 @@
+.blog-title {
+  border: 2px solid gray;
+  border-radius: 12px;
+}
+.blog-title,
+h4 {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  text-align: center;
+  align-items: center;
+  font-weight: bold;
+}
+.ppimgdiv {
+  display: flex;
+  justify-content: center;
+}
+.ppimg {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 137px;
+  height: 167px;
+  border: 2px solid;
+}
+.profile-body {
+  display: flex;
+  flex-direction: column;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+.socilmedia {
+  display: flex;
+  flex-direction: row;
+}
+.socialmedia a {
+  padding: 5px;
+  font-size: 20px;
+}
+.profiledata {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  margin: 12px;
+}
+.connect {
+  object-fit: cover;
+  border: 2px solid;
+  border-radius: 30%;
+  display: flex;
+  padding: 2px;
+}
+.blogs-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.blog-contains {
+  border: 2px solid;
+  border-radius: 10px;
+  width: 100%;
+}
+.blog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px !important;
+}
+
+.card-body {
+  background: rgba(0, 0, 0, 0.6);
+  color: whitesmoke;
+}
+.blog-contains {
+  overflow: hidden; /* Hides the content that overflows its bounds */
+  position: relative; /* Required for absolute positioning of the .blogs div */
+  height: 630px;
+}
+
+.blogs {
+  position: absolute; /* Allows the .blogs div to be positioned relative to its containing div */
+  top: 0; /* Start the scroll from the top */
+  animation: scroll 80s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.6);
+  color: whitesmoke;
+}
+.card-1 {
+  display: flex;
+  flex-direction: column;
+}
+.card-2 {
+  padding: 12px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.card-3 {
+  padding: 12px;
+  margin: 25px;
+}
+.card-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 25px;
+  border: 2px solid gray;
+  padding: 10px;
+}
+.comments {
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.link {
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.more-link {
+  text-decoration: none;
+}
+.img {
+  height: 520px;
+}
+.c-area {
+  border: 2px solid gray;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.comment-area {
+  height: 320px;
+}
+
+@media only screen and (max-width: 767px) {
+  .img {
+    height: 220px;
+  }
+  .blog-title{
+    display: flex;
+    flex-direction: column;
+  }
+  .main{
+    display: flex !important;
+    flex-direction: column;
+  }
+}

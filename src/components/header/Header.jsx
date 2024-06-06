@@ -5,6 +5,8 @@ import ME from '../../assets/DSC2.png'
 import HeaderSocial from './HeaderSocial'
 import { Typewriter } from 'react-simple-typewriter'
 import { HiArrowNarrowRight } from "react-icons/hi";
+// import ChatBot from 'react-simple-chatbot';
+import ChatBot from './Chatbot'
 
 
 const Header = () => {
@@ -36,7 +38,11 @@ const Header = () => {
         <div className='me'>
           <img src={ME} alt="me" className='my_pic' />
         </div>
-        <a href="#contact" className='scroll__down'>Scroll Down  <HiArrowNarrowRight /></a>
+        {/* <ChatBot /> */}
+
+
+
+        {/* <a href="#contact" className='scroll__down'>Scroll Down  <HiArrowNarrowRight /></a> */}
       </div>
     </header>
   )
